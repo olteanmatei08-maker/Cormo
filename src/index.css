@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --bg-app: #0c0e14;
+  --bg-card: #131722;
+  --header-bg: #0c0e14;
+  --nav-bg: #0c0e14;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-subtle: #1e2433;
+}
+
+:root.theme-forest {
+  --bg-app: #080f0b;
+  --bg-card: #101c15;
+  --header-bg: #080f0b;
+  --nav-bg: #080f0b;
+  --text-main: #f1f5f9;
+  --text-muted: #86efac;
+  --border-subtle: #173322;
+}
+
+:root.theme-black {
+  --bg-app: #000000;
+  --bg-card: #0d0d0f;
+  --header-bg: #000000;
+  --nav-bg: #000000;
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --border-subtle: #222227;
+}
+
+:root.theme-light {
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --header-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-subtle: #e2e8f0;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-title {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+/* Minimalist Card & Button Utilities */
+.ui-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+}
+
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  background-color: #1a202c;
+  color: #e2e8f0;
+  border: 1px solid #2d3748;
+}
+
+.ui-btn:hover {
+  background-color: #242c3d;
+  color: #ffffff;
+  border-color: #4a5568;
+}
+
+.ui-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  background-color: #047857;
+  color: #ffffff;
+  border: 1px solid #059669;
+}
+
+.ui-btn-primary:hover {
+  background-color: #059669;
+  border-color: #10b981;
+}
+
+/* Minimalist subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242c3d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b465d;
+}
